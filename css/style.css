@@ -1,0 +1,373 @@
+:root {
+  --main-font: "Inter", sans-serif;
+  --main-color: teal;
+  --second-color: #f75819;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--main-color);
+  color: white;
+}
+.navbar-collapse {
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: large;
+  position: relative;
+}
+.navbar {
+  position: fixed;
+  top: 0.1rem;
+}
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color, #3498db);
+  transition: width 0.3s ease-in-out;
+  margin: 0 auto;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+.about-ahmed {
+  padding-top: 8rem;
+}
+.about-ahmed .item {
+  background-color: rgba(3, 36, 36, 0.24) !important;
+}
+.item h1 {
+  color: var(--second-color);
+}
+
+.socilalLinks div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+.socilalLinks div:hover {
+  opacity: 0.8;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+.github {
+  background-color: #333;
+  color: white !important;
+}
+.whatsapp {
+  background-color: #25d366; /* اللون الرسمي للواتساب */
+}
+.myPage .more-about a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+  padding: 10px 20px;
+  text-transform: capitalize;
+}
+.myPage .more-about a::after {
+  content: "";
+  background: var(--second-color);
+  border-bottom: 2px solid var(--second-color);
+  border-top: 2px solid var(--second-color);
+  width: 0%;
+  height: 93%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  transform: skewX(-20deg);
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.myPage .more-about a::before {
+  content: "";
+  background: var(--second-color);
+  border-bottom: 2px solid var(--second-color);
+  border-top: 2px solid var(--second-color);
+  width: 0%;
+  height: 93%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  transform: skewX(-20deg);
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.myPage .more-about a:hover::before {
+  background-color: var(--second-color);
+  width: 102%;
+  left: -0.1rem;
+  box-shadow: 0 0 25px var(--main-color);
+}
+.image-container {
+  height: 330px;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  filter: brightness(0.9);
+  transition: transform 0.4s ease;
+  border-top-right-radius: 200px;
+  border-bottom-left-radius: 200px;
+}
+.image-container:hover img {
+  transform: scale(1.05);
+}
+.info-box {
+  background-color: #f8f9fa77; /* لون هادئ */
+  transition: transform 0.3s ease;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 0;
+}
+
+.info-box:hover {
+  transform: scale(1.03);
+}
+
+.label {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.value {
+  font-size: 1rem;
+  color: #333;
+}
+
+.skills .header h1 {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.skill-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fad3; /* لون هادئ */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: black;
+  background-color: white;
+}
+
+.skill-card i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover i {
+  transform: scale(1.1);
+}
+
+/* Colors per skill */
+.angular {
+  color: #dd0031;
+}
+.html {
+  color: #e34c26;
+}
+.css {
+  color: #264de4;
+}
+.js {
+  color: #f0db4f;
+}
+.typescript {
+  color: #3178c6;
+}
+.c {
+  color: #5e97d0;
+}
+.cpp {
+  color: #004482;
+}
+.algo {
+  color: #9c27b0;
+}
+.oop {
+  color: #3f51b5;
+}
+.bootstrap {
+  color: #7952b3;
+}
+.tailwind {
+  color: #38bdf8;
+}
+.sass {
+  color: #cd6799;
+}
+.jquery {
+  color: #0769ad;
+}
+
+.skill-card p {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #333;
+}
+#skills .doing .card {
+  min-height: 300px;
+}
+
+#skills .doing {
+  counter-reset: card-counter; /* إعادة تعيين العداد */
+}
+
+#skills .doing .card {
+  position: relative;
+  counter-increment: card-counter; /* زيادة العداد مع كل كارد */
+}
+
+#skills .doing .card::after {
+  content: counter(card-counter); /* عرض قيمة العداد */
+  position: absolute;
+  top: -1%;
+  right: -1%;
+  width: 50px;
+  height: 75px;
+  padding: 10px 60px 10px 15px;
+  border-bottom-left-radius: 69%;
+  background-color: gray;
+  color: white;
+  font-size: 25px;
+  transition: 1s;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.text-design {
+  color: #007bff; /* الأزرق للأيقونات التي تتعلق بتصميم المواقع */
+}
+
+.text-frontend {
+  color: #28a745; /* الأخضر لتطوير الواجهة الأمامية */
+}
+
+.text-responsivity {
+  color: #ff6347; /* الأحمر للمسؤولية */
+}
+
+.text-uiux {
+  color: #ff8c00; /* البرتقالي لتحسين واجهة المستخدم */
+}
+
+.text-performance {
+  color: #f39c12; /* الأصفر لتحسين الأداء */
+}
+
+.text-clean-code {
+  color: #2ecc71; /* الأخضر النقي لكتابة الكود النظيف */
+}
+
+.text-component {
+  color: #9b59b6; /* البنفسجي للعمارة المكونة */
+}
+
+.text-angular {
+  color: #e74c3c; /* الأحمر الداكن لأنجولار */
+}
+
+.card-hover-effect {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-hover-effect img {
+  transition: transform 0.4s ease;
+  border-radius: 12px;
+}
+
+.card-hover-effect:hover img {
+  transform: scale(1.04);
+}
+
+.card-hover-effect::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #0dcaf0, #6610f2);
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.4s;
+  border-radius: 16px;
+}
+
+.card-hover-effect:hover::before {
+  opacity: 0.1;
+}
+
+.card-hover-effect .text,
+.card-hover-effect a {
+  position: relative;
+  z-index: 1;
+}
+#contact{
+  background-color:#fdf6e3ad   ;
+}
+/* Contact Section Styles */
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+.footer {
+  background-color: rgba(0, 0, 0, 0.726);
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer a:hover {
+  color: #e0f7f1;
+  padding-left: 5px;
+}
+
+.footer i {
+  font-size: 1rem;
+  vertical-align: middle;
+}
